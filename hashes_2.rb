@@ -7,10 +7,12 @@ states = {
   "Colorado" => "CO"
 }
 
-# Use the each method to iterate through it and print out a sentence stating each state name and abbreviation
-#
-#
-#
+# Use the each method to iterate through it and print out a sentence
+#stating each state name and abbreviation
+
+states.each do |state, abbreviation|
+  p "The abbreviation for #{state} is #{abbreviation}."
+end
 
 
 # ======================================
@@ -23,11 +25,12 @@ birthdays = {
   "Jeff" => "February 12"
 }
 
-# Use the each method to iterate through it and print out a sentence stating each friends name and birthday
-#
-#
-#
+# Use the each method to iterate through it and print out a sentence
+#stating each friends name and birthday
 
+birthdays.each do |name, date|
+  p "#{name}s' birthday is on #{date}"
+end
 
 # ======================================
 # 3- Using the following Hash
@@ -39,7 +42,11 @@ login_statuses = {
   "Jeff" => true
 }
 
-# Use the each method to iterate through it and print ONLY the names of friends who are "logged in"
-#
-#
-#
+# Use the each method to iterate through it and print ONLY the names of
+#friends who are "logged in"
+
+login_statuses.each do |name, log_status|
+  if log_status == true
+    p "#{name} is logged in."
+  end
+end
